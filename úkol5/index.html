@@ -1,0 +1,37 @@
+
+   
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Čísla dělitelná 2 nebo 3</title>
+</head>
+<body>
+    <label for="userNumber">Zadej číslo: </label>
+    <input type="number" id="userNumber" />
+    <button onclick="printDivisibleNumbers()">Vypis čísla</button>
+ 
+    <ul id="outputList"></ul>
+ 
+    <script>
+        function printDivisibleNumbers() {
+            var userNumber = document.getElementById("userNumber").value;
+            var outputList = document.getElementById("outputList");
+ 
+            outputList.innerHTML = "";
+ 
+            var divisor = userNumber % 2 === 0 ? 2 : 3;
+
+            for (var i = divisor; i <= userNumber; i += divisor) {
+                var listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode(i));
+                outputList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>
+ 
+</body>
+</html>

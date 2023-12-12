@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudá čísla od 1 do 100</title>
+</head>
+<body>
+    <ul id="evenNumbersList"></ul>
+ 
+    <script>
+        var evenNumbersList = document.getElementById("evenNumbersList");
+ 
+        for (var i = 2; i <= 100; i += 2) {
+            var listItem = document.createElement("li");
+            listItem.appendChild(document.createTextNode(i));
+            evenNumbersList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

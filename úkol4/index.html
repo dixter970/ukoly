@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Čísla od 1 do zadného čísla</title>
+</head>
+<body>
+<label for="userNumber">Zadej číslo: </label>
+<input type="number" id="userNumber" />
+<button onclick="printNumbers()">Vypis čísla</button>
+ 
+    <ul id="outputList"></ul>
+ 
+    <script>
+        function printNumbers() {
+            var userNumber = document.getElementById("userNumber").value;
+            var outputList = document.getElementById("outputList");
+
+            outputList.innerHTML = "";
+
+            for (var i = 1; i <= userNumber; i++) {
+                var listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode(i));
+                outputList.appendChild(listItem);
+            }
+        }
+</script>
+</body>
+</html>
